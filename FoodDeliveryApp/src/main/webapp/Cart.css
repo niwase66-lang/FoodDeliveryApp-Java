@@ -1,0 +1,533 @@
+@charset "UTF-8";
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#fdfbfb,#ebedee);
+  min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#fff;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:#ff5722;
+}
+
+.nav-links a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+/* ===== CART PAGE ===== */
+.cart-container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+}
+
+.cart-title{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+/* ===== EMPTY CART ===== */
+.empty-cart{
+  background:#fff;
+  padding:60px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.empty-cart h2{
+  margin-bottom:15px;
+}
+
+.empty-cart p{
+  color:#666;
+  margin-bottom:25px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:14px;
+  background:#ff5722;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#e64a19;
+}
+
+/* ===== CART GRID ===== */
+.cart-grid{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  overflow:hidden;
+}
+
+.cart-header,
+.cart-row{
+  display:grid;
+  grid-template-columns:2fr 1fr 1.5fr 1fr 0.5fr;
+  align-items:center;
+  padding:18px 22px;
+}
+
+.cart-header{
+  background:#fff3ee;
+  font-weight:700;
+}
+
+.cart-row{
+  border-top:1px solid #eee;
+}
+
+/* ===== QTY CONTROLS ===== */
+.qty-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.qty-btn{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  border:none;
+  background:#ff5722;
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.qty{
+  font-weight:700;
+  min-width:20px;
+  text-align:center;
+}
+
+/* ===== PRICE ===== */
+.price{
+  font-weight:700;
+  color:#ff5722;
+}
+
+.total{
+  font-weight:700;
+  color:#2ecc71;
+}
+/* ===== DELETE BUTTON ===== */
+.delete-btn{
+  background:#ffecec;
+  border:none;
+  border-radius:50%;
+  width:31px;
+  height:31px;
+  font-size:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+}
+
+.delete-btn:hover{
+  background:#ffdddd;
+  transform:scale(1.1);
+}
+
+/* ===== GRAND TOTAL ===== */
+.grand-total-box{
+  margin-top:25px;
+  padding:18px 24px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.grand-label{
+  font-size:20px;
+  font-weight:700;
+  color:#333;
+}
+
+.grand-amount{
+  font-size:22px;
+  font-weight:800;
+  color:#2ecc71;
+}
+
+
+/* ===== CART ACTIONS ===== */
+.cart-actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .cart-header{
+    display:none;
+  }
+
+  .cart-row{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .cart-row div::before{
+    content:attr(data-label);
+    font-weight:600;
+    color:#555;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  .cart-actions{
+    flex-direction:column;
+    gap:15px;
+  }
+  @media(max-width:768px){
+  .grand-total-box{
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+  }
+
+  .grand-amount{
+    font-size:20px;
+  }
+}
+@media(max-width:768px){
+  .cart-row{
+    grid-template-columns:1fr;
+  }
+
+  .cart-row div::before{
+    content:attr(data-label);
+    font-weight:600;
+    color:#555;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  .delete-btn{
+    align-self:flex-start;
+  }
+}
+
+
+}
+
+/* ===== PROFILE OVERLAY ===== */
+.profile-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:10000;
+  display:flex;
+  justify-content:flex-end;
+}
+
+/* ===== PROFILE PANEL ===== */
+.profile-panel{
+  width:25%;
+  min-width:320px;        /* keeps it usable on large screens */
+  max-width:420px;
+  height:100%;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  animation: slideInRight 0.4s ease;
+}
+
+
+/* ===== HEADER ===== */
+.profile-header{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:20px;
+  border-bottom:1px solid #eee;
+}
+
+.profile-avatar{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff5722,#ff7043);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:700;
+  font-size:18px;
+}
+
+.profile-header h3{
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.profile-header p{
+  font-size:13px;
+  color:#666;
+}
+
+/* ===== BODY ===== */
+.profile-body{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.profile-section{
+  margin-bottom:25px;
+}
+
+.profile-section h4{
+  font-size:15px;
+  margin-bottom:10px;
+  color:#333;
+}
+
+.profile-section p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:6px;
+}
+
+/* ===== DARK MODE TOGGLE ===== */
+.toggle-section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.switch{
+  position:relative;
+  width:48px;
+  height:26px;
+}
+
+.switch input{
+  display:none;
+}
+
+.slider{
+  position:absolute;
+  inset:0;
+  background:#ccc;
+  border-radius:26px;
+  transition:0.3s;
+}
+
+.slider::before{
+  content:"";
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#fff;
+  border-radius:50%;
+  top:3px;
+  left:3px;
+  transition:0.3s;
+}
+
+.switch input:checked + .slider{
+  background:#ff5722;
+}
+
+.switch input:checked + .slider::before{
+  transform:translateX(22px);
+}
+
+/* ===== FOOTER ===== */
+.profile-footer{
+  padding:20px;
+  border-top:1px solid #eee;
+}
+
+.logout-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:14px;
+  background:#e53935;
+  color:#fff;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.logout-btn:hover{
+  background:#c62828;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideInRight{
+  from{
+    transform:translateX(100%);
+  }
+  to{
+    transform:translateX(0);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .profile-panel{
+    width:100%;
+    max-width:100%;
+  }
+}
+/* ===== BACK BUTTON ===== */
+.back-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#f2f2f2;
+  color:#333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:700;
+  margin-right:10px;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#ff5722;
+  color:#fff;
+}
+
+/* Align header nicely */
+.profile-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* ===== LOGOUT CONFIRMATION OVERLAY ===== */
+.logout-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:20000;
+}
+
+/* show when targeted */
+.logout-overlay:target{
+  display:flex;
+}
+
+/* ===== MODAL BOX ===== */
+.logout-modal{
+  background:#fff;
+  padding:30px 28px;
+  border-radius:20px;
+  width:90%;
+  max-width:380px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,0.3);
+  animation: popIn 0.35s ease;
+}
+
+.logout-modal h2{
+  font-size:22px;
+  margin-bottom:10px;
+  color:#333;
+}
+
+.logout-modal p{
+  font-size:14px;
+  color:#666;
+  margin-bottom:25px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.logout-actions{
+  display:flex;
+  gap:14px;
+}
+
+.logout-actions .btn{
+  flex:1;
+  padding:12px;
+  border-radius:14px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  text-align:center;
+  transition:0.3s;
+}
+
+/* Confirm */
+.btn.danger{
+  background:#e53935;
+  color:#fff;
+}
+
+.btn.danger:hover{
+  background:#c62828;
+}
+
+/* Cancel */
+.btn.outline{
+  border:2px solid #ddd;
+  color:#333;
+  background:#fff;
+}
+
+.btn.outline:hover{
+  border-color:#ff5722;
+  color:#ff5722;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:480px){
+  .logout-modal{
+    border-radius:16px;
+  }
+}
+@keyframes popIn{
+  from{transform:scale(0.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
