@@ -30,5 +30,5 @@ A full-stack Java web application that simulates a real-world food delivery plat
 ![Login](FoodDeliveryApp/FoodDeliverApp-Screenshots/login.png)
 
 ### Restaurant Listing
-![Restaurants](FoodDeliveryApp/FoodDeliverApp-Screenshots/restaurants.png)
+![Restaurants](FoodDeliveryApp/FoodDeliverApp-Screenshots/homepage.png)
 
