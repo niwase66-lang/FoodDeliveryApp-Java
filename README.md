@@ -74,3 +74,53 @@ A full-stack Java web application that simulates a real-world food delivery plat
 ### 🚪 Logout Confirmation
 ![Logout Confirmation](FoodDeliveryApp/FoodDeliverApp-Screenshots/logout%20confirmation.png)
 
+## 🏗 Project Architecture
+
+- MVC Architecture
+- JSP – View Layer
+- Servlets – Controller Layer
+- DAO & DAOImpl – Data Access Layer
+- MySQL – Database
+- JDBC – Database Connectivity
+
+
+## 🗄 Database Design
+
+### Tables
+- users
+- restaurants
+- menu
+- cart
+- orders
+- order_items
+- all_address
+
+## ▶ How to Run the Project
+
+1. Clone the repository
+2. Import into Eclipse as Dynamic Web Project
+3. Configure Apache Tomcat 10+
+4. Create MySQL database and tables
+5. Update DB credentials in JDBC connection
+6. Run on server
+
+## 🛠 Tech Stack
+
+- Java
+- JSP & Servlets
+- JDBC
+- MySQL
+- HTML5
+- CSS3
+- Apache Tomcat
+
+## ⭐ Key Highlights
+
+- Industry-style UI inspired by Swiggy/Zomato
+- Guest user browsing without login
+- Dynamic restaurant & menu rendering
+- Responsive UI (mobile + desktop)
+- Address management with multiple addresses
+- Order history with item-level details
+
+
