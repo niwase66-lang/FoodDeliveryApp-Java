@@ -24,11 +24,53 @@ A full-stack Java web application that simulates a real-world food delivery plat
 - Checkout with address selection
 - Order history & tracking
 
-- ## 📸 Screenshots
+## 📸 Application Screenshots
 
-### Login Page
+### 🔐 Login Page
 ![Login](FoodDeliveryApp/FoodDeliverApp-Screenshots/login.png)
 
-### Restaurant Listing
-![Restaurants](FoodDeliveryApp/FoodDeliverApp-Screenshots/homepage.png)
+### 📝 Register Page
+![Register](FoodDeliveryApp/FoodDeliverApp-Screenshots/register.png)
+
+### 🏠 Home Page
+![Home Page](FoodDeliveryApp/FoodDeliverApp-Screenshots/homepage.png)
+
+### 🔎 Login from Home Page
+![Login From Home](FoodDeliveryApp/FoodDeliverApp-Screenshots/login%20from%20home%20page.png)
+
+### 🛒 Cart Page
+![Cart](FoodDeliveryApp/FoodDeliverApp-Screenshots/cart.png)
+
+### 📋 Menu Page
+![Menu](FoodDeliveryApp/FoodDeliverApp-Screenshots/menu.png)
+
+### ➕ Add Address
+![Add Address](FoodDeliveryApp/FoodDeliverApp-Screenshots/add%20address.png)
+
+### 🚚 Checkout (Login Required)
+![Checkout Login](FoodDeliveryApp/FoodDeliverApp-Screenshots/checkout%20login.png)
+
+### 📦 Checkout – Step 1
+![Checkout 1](FoodDeliveryApp/FoodDeliverApp-Screenshots/checkout1.png)
+
+### 📦 Checkout – Step 2
+![Checkout 2](FoodDeliveryApp/FoodDeliverApp-Screenshots/checkout2.png)
+
+### 📞 Contact Details
+![Contact Details](FoodDeliveryApp/FoodDeliverApp-Screenshots/contact%20details.png)
+
+### ✅ Order Confirmation
+![Order Confirmation](FoodDeliveryApp/FoodDeliverApp-Screenshots/order%20confirmation%20msg.png)
+
+### 📜 Order History
+![Order History](FoodDeliveryApp/FoodDeliverApp-Screenshots/orderhistory.png)
+
+### 📦 Order Item Details
+![Order Item Details](FoodDeliveryApp/FoodDeliverApp-Screenshots/orderitem%20details.png)
+
+### 👤 Profile Sidebar
+![Profile Bar](FoodDeliveryApp/FoodDeliverApp-Screenshots/profilebar.png)
+
+### 🚪 Logout Confirmation
+![Logout Confirmation](FoodDeliveryApp/FoodDeliverApp-Screenshots/logout%20confirmation.png)
 
