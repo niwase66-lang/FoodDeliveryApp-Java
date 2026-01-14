@@ -23,3 +23,12 @@ A full-stack Java web application that simulates a real-world food delivery plat
 - Add to cart with quantity control
 - Checkout with address selection
 - Order history & tracking
+
+- ## 📸 Screenshots
+
+### Login Page
+![Login](FoodDeliveryApp/FoodDeliverApp-Screenshots/login.png)
+
+### Restaurant Listing
+![Restaurants](screenshots/restaurants.png)
+
